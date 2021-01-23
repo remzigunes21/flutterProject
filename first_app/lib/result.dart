@@ -23,6 +23,10 @@ class Result extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var text = Text(
+      "Reset Quiz",
+      style: TextStyle(fontSize: 16, color: Colors.redAccent),
+    );
     var column = Column(
       children: [
         Container(
@@ -32,12 +36,7 @@ class Result extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
         ),
-        FlatButton(
-            onPressed: _resetHandler,
-            child: Text(
-              "Reset Quiz",
-              style: TextStyle(fontSize: 16, color: Colors.redAccent),
-            ))
+        FlatButton(onPressed: _resetHandler, child: text)
       ],
     );
     return Center(
